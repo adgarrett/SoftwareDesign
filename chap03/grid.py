@@ -7,19 +7,19 @@ Author: Aliesha Garrett
 
 def draw(x,y):
 
-	a='+ - - - -'*x
-	b='|        '*x
+	a='+ - - - - '*x
+	b='|         '*x
 
 	for i in range(y):	
 	
-		print a,'+'
-		print b,'|'
-		print b,'|'
-		print b,'|'
-		print b,'|'
+		print a+'+'
+		print b+'|'
+		print b+'|'
+		print b+'|'
+		print b+'|'
 
 
-	print a,'+'
+	print a+'+'
 
 
 

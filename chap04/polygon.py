@@ -4,9 +4,11 @@ This segment of code completes some exercises from Chapter 4 of Think Python.
 Author: Aliesha Garrett
 """
 
+from swampy.TurtleWorld import *
+import math
+
 #draws a square
 def square(bob):
-	from swampy.TurtleWorld import *
 
 	world=TurtleWorld()
 	bob=Turtle()
@@ -19,7 +21,6 @@ def square(bob):
 
 #draws a square of given length sides
 def lsquare(length):
-	from swampy.TurtleWorld import *
 
 	world=TurtleWorld()
 	bob=Turtle()
@@ -32,7 +33,6 @@ def lsquare(length):
 
 #draws a polygon with n sides of given length
 def polygon(n,length):
-	from swampy.TurtleWorld import *
 
 	world=TurtleWorld()
 	bob=Turtle()
@@ -47,7 +47,6 @@ def polygon(n,length):
 
 #draws a circle with radius r
 def circle(t,r):
-	from swampy.TurtleWorld import *
 	import math
 
 	world=TurtleWorld()
@@ -67,8 +66,6 @@ def circle(t,r):
 
 #draws an arc of a circle with radius r and angle a
 def arc(t,r,a):
-	from swampy.TurtleWorld import *
-	import math
 
 	world=TurtleWorld()
 	t=Turtle()
