@@ -1,6 +1,6 @@
 """Module that provides is_palindrome.
 
-Author of is_palindrome: you
+Author of is_palindrome: Aliesha Garrett
 """
 
 def first(word):
@@ -33,8 +33,25 @@ def middle(word):
     return word[1:-1]
 
 
-def is_palindrome(word):
-    """Write a good Docstring here."""
 
-    # TODO: fill in the body of this function
-    return True
+
+   
+
+def is_palindrome(word):
+
+	if first(word)!=last(word):
+		return False
+	elif middle(word)=='':
+		return True
+	else:
+		new=middle(word)
+		return is_palindrome(new)
+"""This function takes a word and returns "True" if it is a palindrome and "False" if it is not.
+
+word: string"""
+  
+
+
+
+
+
