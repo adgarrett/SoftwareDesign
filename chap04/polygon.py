@@ -49,17 +49,12 @@ def polygon(n,length):
 def circle(t,r):
 	import math
 
-	world=TurtleWorld()
-	t=Turtle()
-	t.delay=.01
-	print t
-
 	length= math.pi*r/180
-	
+	t.delay=.01
 
 	for i in range(360):
 		fd(t,length)
-		lt(t, 1)
+		rt(t, 1)
 
 
 
@@ -78,4 +73,27 @@ def arc(t,r,a):
 	for i in range(a):
 		fd(t,length)
 		lt(t, 1)
+
+
+def star(t,length):
+	for i in range(5):
+		fd(t,length)
+		lt(t,72)
+		fd(t,length)
+		rt(t,144)
+
+
+def circle_star(t,length):
+	t.delay=.01
+	star(t,length)
+	lt(t,72.4)
+	a=length*math.sin(.314159265)
+	circle(t,length+a)
+
+
+world=TurtleWorld()
+t=Turtle()
+length=50
+
+circle_star(t,length)
 
