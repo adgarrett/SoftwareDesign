@@ -16,6 +16,9 @@ def make_word_list1():
     returns: list of strings
     """
     t = []
+    for line in open('words.txt'):
+        word = line.strip()
+        t.append(word)       
     return t
 
 
@@ -25,6 +28,9 @@ def make_word_list2():
     returns: list of strings
     """
     t = []
+    for line in open('words.txt'):
+        word=line.strip()
+        t += [word]
     return t
 
 
