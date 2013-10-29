@@ -5,6 +5,8 @@ http://thinkpython.com
 Copyright 2012 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 
+Modified by Aliesha Garrett
+
 """
 
 import string
@@ -69,8 +71,14 @@ def most_common(hist):
     returns: list of (word, frequency) pairs, sorted by frequency
     """
     t = []
-    # TODO: fix this
-    return t
+    res=[]
+    for key in hist:
+        value=hist[key]
+        t.append((value,key))
+    t.sort(reverse=True)
+    for element in t:
+        res.append([element[1],element[0]])
+    return res
 
 
 def print_most_common(hist, num=10):
@@ -93,7 +101,9 @@ def subtract(d1, d2):
     returns: new dictionary
     """
     res = {}
-    # TODO: fill this is
+    for key in d1:
+        if key not in d2:
+            res[key]=d1[key]
     return res
 
 
@@ -112,9 +122,15 @@ def random_word(hist):
 
     The probability of each word is proportional to its frequency.
     """
-    # TODO: fix this
-    return 'random word'
-
+    tot=0
+    ran_dict=dict()
+    for key in hist:
+        val=hist[key]
+        for i in range(val):
+            ran_dict[tot+i+1]=key
+        tot += val
+    n = random.randint(1,tot)
+    return ran_dict[n]
 
 if __name__ == '__main__':
     hist = process_file('emma.txt', skip_header=True)
